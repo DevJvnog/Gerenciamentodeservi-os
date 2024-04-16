@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Serviços</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="service-container">
+        <h2>Gerenciamento de Serviços</h2>
+        <form id="service-form">
+            <div>
+                <label for="plate-input">Placa:</label>
+                <input type="text" id="plate-input" placeholder="Placa...">
+            </div>
+            <div>
+                <label for="model-input">Modelo:</label>
+                <input type="text" id="model-input" placeholder="Modelo...">
+            </div>
+            <div>
+                <label for="color-input">Cor:</label>
+                <input type="text" id="color-input" placeholder="Cor...">
+            </div>
+            <div>
+                <label for="description-input">Descrição:</label>
+                <textarea id="description-input" class="service-description" placeholder="Descrição do serviço..."></textarea>
+            </div>
+            <div>
+                <label for="responsavel-input">Responsável:</label>
+                <textarea id="responsavel-input" placeholder="Responsável..."></textarea>
+            </div>
+            <div>
+                <label for="start-date-input">Data Inicial:</label>
+                <input type="datetime-local" id="start-date-input">
+            </div>
+            <div>
+                <label for="end-date-input">Data Limite:</label>
+                <input type="datetime-local" id="end-date-input">
+            </div>
+            <button type="button" id="add-service">Adicionar Serviço</button>
+        </form>
+        <input type="text" id="search-input" placeholder="Buscar por placa...">
+        <button type="button" id="search-button">Buscar</button>
+        <table id="service-table">
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Modelo</th>
+                    <th>Cor</th>
+                    <th>Descrição</th>
+                    <th>Responsável</th>
+                    <th>Data Inicial</th>
+                    <th>Data Limite</th>
+                    <th>Tempo Restante</th>
+                    <th>Status</th>
+                    <th>Excluir</th>
+                    <th>Finalizar</th>
+                </tr>
+            </thead>
+            <tbody id="service-body"></tbody>
+        </table>
+        <button type="button" id="print-button">Imprimir Relatório</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
